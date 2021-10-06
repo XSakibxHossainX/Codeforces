@@ -1,2 +1,2 @@
 # Codeforces
-What I have learned form each problem
+Sometimes Greedy way is best way than Dynamic! You need to think it easily you know
