@@ -1,0 +1,68 @@
+package pkg4a_codeforces;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import static java.lang.System.out;
+import java.util.StringTokenizer;
+
+
+
+public class Main {
+
+    public static void main(String[] args) {
+        FastReader fr = new FastReader();
+        int count=0;
+        int Quetion = fr.nextInt();
+        for(int i=0;i<Quetion;i++){
+        int Petya = fr.nextInt();
+        int Vasya = fr.nextInt();
+        int Tonya = fr.nextInt();
+        if((Petya+Vasya+Tonya)==2 ||(Petya+Vasya+Tonya)==3){
+           count++;
+        }
+        }
+        out.print(count+"\n");
+        out.flush();
+    }
+    
+
+     private static class FastReader {
+        BufferedReader br;
+        StringTokenizer st;
+ 
+        public FastReader() {
+            br = new BufferedReader(new InputStreamReader(System.in));
+        }
+        String next() 
+        {
+            while (st == null || !st.hasMoreElements()) {
+                try {
+                    st = new StringTokenizer(br.readLine());
+                }
+                catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            return st.nextToken();
+        }
+ 
+        int nextInt() { return Integer.parseInt(next()); } // For int
+ 
+        long nextLong() { return Long.parseLong(next()); } // for long
+ 
+        double nextDouble(){ return Double.parseDouble(next()); }
+ 
+        String nextLine()                                 // for string
+        {
+            String str = "";
+            try {
+                str = br.readLine();
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+            }
+            return str;
+        }
+    }
+}
