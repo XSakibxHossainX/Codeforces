@@ -1,0 +1,72 @@
+package testing;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import static java.lang.System.out;
+import java.util.StringTokenizer;
+
+public class Testing {
+
+    public static void main(String[] args) {
+        FastReader reader = new FastReader();
+        int test = reader.nextInt();
+        
+        
+        while(test-->0){
+        int a = reader.nextInt();
+        int b = reader.nextInt();
+        int c = reader.nextInt();
+            int sum = 0;
+            int concert1 = 0;
+            int concert2 = 0;
+           
+            sum = a+(b*2)+(c*3);
+            concert1 = sum/2;
+            concert2 = concert1 - sum;
+            out.println((Math.abs(concert1 + concert2)));
+            
+            
+        }
+        
+    }
+       private static class FastReader  {
+        BufferedReader br;
+        StringTokenizer st;
+ 
+        public FastReader() {
+            br = new BufferedReader(new InputStreamReader(System.in));
+        }
+        String next() 
+        {
+            while (st == null || !st.hasMoreElements()) {
+                try {
+                    st = new StringTokenizer(br.readLine());
+                }
+                catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            return st.nextToken();
+        }
+ 
+        int nextInt() { return Integer.parseInt(next()); }
+ 
+        long nextLong() { return Long.parseLong(next()); }
+ 
+        double nextDouble(){ return Double.parseDouble(next()); }
+ 
+        String nextLine()                                
+        {
+            String str = "";
+            try {
+                str = br.readLine();
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+            }
+            return str;
+        }
+    }
+ 
+}
