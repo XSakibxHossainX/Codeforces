@@ -30,7 +30,7 @@ public class Main {
         out.flush();
     }
    
-    
+     
 
      private static class FastReader {
         BufferedReader br;
