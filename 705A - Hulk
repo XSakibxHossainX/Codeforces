@@ -32,7 +32,7 @@ public class Main {
            out.print(s3+" "+s4+" ");
            i=i-1; 
            }else{
-            if(i%2!=0){
+            if(i%2!=0){ 
                 out.print(s4+" ");
             }else{
                 out.print(s3+" ");
