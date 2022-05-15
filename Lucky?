@@ -1,0 +1,33 @@
+import java.util.Arrays;
+import java.util.Scanner;
+public class Lucky {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		String str;
+		int t = scan.nextInt();
+		while(t-->0) {
+			int a = 0,b=0;
+			int[] num = new int[6];
+			str = scan.next();
+			char[] ch = str.toCharArray();
+			for(int i=0;i<ch.length;i++) {
+				num[i]=(int)str.charAt(i);
+			}
+			
+			for(int i=0;i<num.length-3;i++) {
+				a=a+num[i];
+			}
+			for(int i=3;i<=5;i++) {
+				b=b+num[i];
+			}
+			
+			if(a==b)
+				System.out.println("YES");
+			else
+				System.out.println("NO");
+		}
+	}
+}
+
+//Concept is 
